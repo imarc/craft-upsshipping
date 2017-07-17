@@ -1,0 +1,15 @@
+{
+    "name": "imarc/craft-upsshipping",
+    "description": "A plugin for Craft Commerce to provide shipping prices via a live lookup to UPS",
+    "type": "craft-plugin",
+    "require": {
+        "composer/installers": "^1.3"
+    },
+    "license": "Apache",
+    "authors": [
+        {
+            "name": "Kevin Hamer",
+            "email": "kevin@imarc.com"
+        }
+    ]
+}

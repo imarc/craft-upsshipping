@@ -1,0 +1,128 @@
+{#
+ # @copyright 2017 Imarc
+ # @author Kevin Hamer [kh] <kevin@imarc.com>
+ # @license Apache (see LICENSE file)
+ #}
+
+{% import "_includes/forms" as forms %}
+
+{{ forms.textField({
+    first:        true,
+	label:        "UPS Developer Kit Access Key"|t,
+	id:           'upsAccessKey',
+	name:         'upsAccessKey',
+    instructions: ""|t,
+    class:        "required",
+	value:        settings.upsAccessKey,
+	errors:       settings.getErrors('upsAccessKey')
+}) }}
+
+{{ forms.textField({
+    first:        true,
+	label:        "UPS Developer Kit Username"|t,
+	id:           'upsUser',
+	name:         'upsUser',
+    instructions: ""|t,
+    class:        "required",
+	value:        settings.upsUser,
+	errors:       settings.getErrors('upsUser')
+}) }}
+
+{{ forms.textField({
+    first:        true,
+	label:        "UPS Developer Kit Password"|t,
+	id:           'upsPassword',
+	name:         'upsPassword',
+    instructions: ""|t,
+    class:        "required",
+	value:        settings.upsPassword,
+	errors:       settings.getErrors('upsPassword')
+}) }}
+
+{{ forms.textField({
+    first:        true,
+	label:        "From Postal Code"|t,
+	id:           'upsFromPostalCode',
+	name:         'upsFromPostalCode',
+    instructions: ""|t,
+    class:        "required",
+	value:        settings.upsFromPostalCode,
+	errors:       settings.getErrors('upsFromPostalCode')
+}) }}
+
+<div class="field">
+    <div class="heading"><label for="upsEnableGround">Enable UPS Ground Shipping?</label></div>
+    {{ forms.lightswitch({
+        label:        'Testing',
+        name:         'upsEnableGround',
+        small: true,
+        on:        settings.upsEnableGround,
+        errors:       settings.getErrors('upsEnableGround')
+    }) }}
+</div>
+
+<div class="field">
+    <div class="heading"><label for="upsEnable3Day">Enable UPS Three-Day Select Shipping?</label></div>
+    {{ forms.lightswitch({
+        label:        'Testing',
+        name:         'upsEnable3Day',
+        small: true,
+        on:        settings.upsEnable3Day,
+        errors:       settings.getErrors('upsEnable3Day')
+    }) }}
+</div>
+
+<div class="field">
+    <div class="heading"><label for="upsEnable2Day">Enable UPS Second Day Air Shipping?</label></div>
+    {{ forms.lightswitch({
+        label:        'Testing',
+        name:         'upsEnable2Day',
+        small: true,
+        on:        settings.upsEnable2Day,
+        errors:       settings.getErrors('upsEnable2Day')
+    }) }}
+</div>
+
+<div class="field">
+    <div class="heading"><label for="upsEnable2DayAM">Enable UPS Second Day Air AM Shipping?</label></div>
+    {{ forms.lightswitch({
+        label:        'Testing',
+        name:         'upsEnable2DayAM',
+        small: true,
+        on:        settings.upsEnable2DayAM,
+        errors:       settings.getErrors('upsEnable2DayAM')
+    }) }}
+</div>
+
+<div class="field">
+    <div class="heading"><label for="upsEnable1DaySaver">Enable UPS Next Day Day Air Saver Shipping?</label></div>
+    {{ forms.lightswitch({
+        label:        'Testing',
+        name:         'upsEnable1DaySaver',
+        small: true,
+        on:        settings.upsEnable1DaySaver,
+        errors:       settings.getErrors('upsEnable1DaySaver')
+    }) }}
+</div>
+
+<div class="field">
+    <div class="heading"><label for="upsEnable1Day">Enable UPS Next Day Air Shipping?</label></div>
+    {{ forms.lightswitch({
+        label:        'Testing',
+        name:         'upsEnable1Day',
+        small: true,
+        on:        settings.upsEnable1Day,
+        errors:       settings.getErrors('upsEnable1Day')
+    }) }}
+</div>
+
+<div class="field">
+    <div class="heading"><label for="upsEnable1DayEarlyAM">Enable UPS Next Day Air Early AM Shipping?</label></div>
+    {{ forms.lightswitch({
+        label:        'Testing',
+        name:         'upsEnable1DayEarlyAM',
+        small: true,
+        on:        settings.upsEnable1DayEarlyAM,
+        errors:       settings.getErrors('upsEnable1DayEarlyAM')
+    }) }}
+</div>
